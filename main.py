@@ -23,6 +23,9 @@ def main():
         train.source_only(encoder, classifier, discriminator, source_train_loader, target_train_loader, save_name)
         test.tester(encoder, classifier, discriminator, source_train_loader, target_train_loader, 'source')
 
+        visualize_input()
+        visualize(encoder, 'source', 'encoded')
+
     else:
         print("There is no GPU -_-!")
 
